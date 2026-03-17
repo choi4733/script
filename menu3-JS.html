@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SubMenu3-JS</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      #wrap {
+        width: 1200px;
+        margin: 0 auto;
+      }
+      #header {
+        width: 100%;
+        background-color: #f1f1f1;
+        display: flex;
+      }
+      #logo {
+        width: 20%;
+        height: 100px;
+        background-color: #663d3d;
+        text-align: center;
+        font-size: 40px;
+      }
+      #nav {
+        width: 80%;
+        height: 100px;
+        background-color: #aa5e5e;
+      }
+      #section {
+        width: 100%;
+        height: 600px;
+        background-color: #5e5e5e;
+      }
+
+      /* nav */
+      #nav > ul {
+        display: flex;
+        margin-top: 30px;
+        justify-content: right;
+      }
+      #nav > ul > li {
+      }
+      #nav > ul > li > a {
+        display: block;
+        padding: 10px 50px;
+        background-color: #ff7676;
+        color: #412626;
+      }
+      #nav > ul > li > a:hover {
+        background-color: rgb(255, 208, 208);
+      }
+      #nav > ul > li > ul.submenu {
+        /* display: none; */
+      }
+      #nav > ul > li > ul.submenu li {
+        text-align: center;
+      }
+      #nav > ul > li > ul.submenu li a {
+        display: block;
+        padding: 10px;
+        color: #2e2e2e;
+        background-color: #fff;
+        box-sizing: border-box;
+      }
+      #nav > ul > li > ul.submenu li a:hover {
+        background-color: #ac3939;
+      }
+
+      /* 자바스크립트 css */
+      #nav > ul > li > ul.submenu {
+        display: block;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="header">
+        <div id="logo">Logo</div>
+        <div id="nav">
+          <ul>
+            <li>
+              <a href="#">menu01</a>
+              <ul class="submenu">
+                <li><a href="#">서브메뉴1-1</a></li>
+                <li><a href="#">서브메뉴1-2</a></li>
+                <li><a href="#">서브메뉴1-3</a></li>
+                <li><a href="#">서브메뉴1-4</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">menu02</a>
+              <ul class="submenu">
+                <li><a href="#">서브메뉴2-1</a></li>
+                <li><a href="#">서브메뉴2-2</a></li>
+                <li><a href="#">서브메뉴2-3</a></li>
+                <li><a href="#">서브메뉴2-4</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">menu03</a>
+              <ul class="submenu">
+                <li><a href="#">서브메뉴3-1</a></li>
+                <li><a href="#">서브메뉴3-2</a></li>
+                <li><a href="#">서브메뉴3-3</a></li>
+                <li><a href="#">서브메뉴3-4</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">menu04</a>
+              <ul class="submenu">
+                <li><a href="#">서브메뉴4-1</a></li>
+                <li><a href="#">서브메뉴4-2</a></li>
+                <li><a href="#">서브메뉴4-3</a></li>
+                <li><a href="#">서브메뉴4-4</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="section"></div>
+    </div>
+
+    <script>
+      // navList.addEventListener("mouseover", function () {
+      //   navList.querySelector(".submenu").forEach(function (sub) {
+      //     console.log(sub);
+      //     sub.style.height = "200px";
+      //   });
+      // });
+
+      // navList.addEventListener("mouseout", function () {
+      //   navList.querySelectorAll(".submenu").forEach(function (sub) {
+      //     sub.style.height = "0px";
+      //   });
+      // });
+
+      const navList = document.querySelector("#nav > ul");
+      navList.addEventListener("mouseover", function () {
+        navList.querySelectorAll("submenu").forEach(function (sub) {
+          sub.style.height = "200px";
+        });
+        document.querySelector("#header").classList.add("on");
+      });
+
+      navList.addEventListener("mouseout", function () {
+        navList.querySelectorAll("submenu").forEach(function (sub) {
+          sub.style.height = "0px";
+        });
+        document.querySelector("#header").classList.remove("on");
+      });
+    </script>
+  </body>
+</html>
