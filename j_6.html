@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <a href="https://www.naver.com/" target="_blank">네이버</a>
+    <br />
+    <button>클릭</button>
+
+    <div><img src="img/icon-flight-changes-1000.jpg" alt="뱅기아이콘" /></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $("button").click(function () {
+        $("a").attr("href", "http://www.daum.net/").text("다음").removeAttr("target");
+      });
+
+      $("img").click(function () {
+        $("this").attr("src", "pexels-jaime-reimer-1376930-2662116.jpg").attr("alt", "여행지");
+      });
+    </script>
+  </body>
+</html>

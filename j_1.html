@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        h2{display: none;}
+        }
+    </style>
+  </head>
+    <h1>제이쿼리</h1>
+    <h2>졸려졸려</h2>
+    <img src="img/onboard-safety-infographic2-1600.jpg" alt="">
+    <button class="shoow">show</button>
+    <button class="hide">hide</button>
+    <button class="imgBtn">img</button>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+    $("button.htid").click(function(){
+        $("h1").hide();
+    });
+    $("button.show").click(function(){
+        $("h2").hide()
+    });
+        $("button.imgBtn").click(function(){
+            $("img").fadeToggle();
+    });
+    </script>
+  </body>
+</html>

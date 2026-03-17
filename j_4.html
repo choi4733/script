@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: #ff5959;
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        transition: 1s;
+      }
+      div.active {
+        top: 600px;
+        left: 500px;
+        opacity: 0.5;
+        width: 300px;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <button>CLICK</button>
+    <div></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $("button").click(function () {
+        // $("div").animate(
+        //   {
+        //     top: "600px",
+        //     left: "500px",
+        //     opacity: "0.5",
+        //     width: "200px",
+        //     height: "200px",
+        //   },
+        //   3000,
+        $("div").toggleClass("active");
+      });
+    </script>
+  </body>
+</html>

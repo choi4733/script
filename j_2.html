@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        margin-top: 50px;
+      }
+      .red {
+        background-color: red;
+      }
+      .green {
+        background-color: green;
+      }
+      .blue {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="up">UP</button>
+    <button class="down">DOWN</button>
+    <button class="toggle">TOGGLE</button>
+
+    <div class="red"></div>
+    <div class="green"></div>
+    <div class="blue"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(".up").click(function () {
+        $(".red").slideUp();
+        $(".green").fadeOut();
+        $(".blue").hide();
+      });
+      $(".down").click(function () {
+        $(".red").slideDown();
+        $(".green").fadeIn();
+        $(".blue").show();
+      });
+      $(".toggle").click(function () {
+        $(".red").slideToggle();
+        $(".green").fadeToggle();
+        $(".blue").toggle();
+      });
+    </script>
+  </body>
+</html>

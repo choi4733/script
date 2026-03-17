@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .change_me {
+        position: absolute;
+        top: 600px;
+        left: 400px;
+        font-size: 30px;
+        font-weight: bold;
+        color: red;
+      }
+      .change_me.active {
+        top: 800px;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="up">Move Up</button>
+    <button class="down">Move Down</button>
+    <button class="color">Color Change</button>
+    <button class="disapprear">disapprear / Re-apprear</button>
+
+    <div class="change_me">변화하는값</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(".up").click(function () {
+        $(".change_me").animate({ top: 100 }, 500);
+      });
+      $(".down").click(function () {
+        $(".change_me").toggleClass("active");
+      });
+
+      $(".color").click(function () {
+        $(".change_me").css({
+          color: "yellow",
+          background: "skyblue",
+          fontSize: "50px",
+        });
+      });
+
+      $(".disapprear").click(function () {
+        $(".change_me").toggle("slow");
+      });
+    </script>
+  </body>
+</html>

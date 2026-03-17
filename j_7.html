@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        display: flex;
+        gap: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <a href="img/cat-10.png">고양이1</a>
+      </li>
+      <li>
+        <a href="img/cat-11.png">고양이2</a>
+      </li>
+      <li>
+        <a href="img/cat-9.png">고양이3</a>
+      </li>
+      <li>
+        <a href="img/cat-7.jpeg">고양이4</a>
+      </li>
+    </ul>
+    <div><img src="img/cat-5small.png" alt="" /></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $("a:eq(0)").click(function () {
+        $("img").attr("src", "img/cat-10.png").attr("alt", "괭이");
+        return false;
+      });
+      $("a:eq(2)").click(function () {
+        $("img").attr("src", "img/cat-11.png").attr("alt", "괭이5");
+        return false;
+      });
+      $("a:eq(3)").click(function () {
+        $("img").attr("src", "img/cat-9.png").attr("alt", "괭이7");
+        return false;
+      });
+    </script>
+  </body>
+</html>

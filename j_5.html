@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 500px;
+        height: 600px;
+        background-color: #25d3ff;
+      }
+    </style>
+  </head>
+  <body>
+    <button>CLICK</button>
+    <div>Culpa incididunt sunt esse sint aliqua. Culpa incididunt sunt esse sint aliqua.</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $("button").click(function () {
+        $("div")
+          .css({
+            "background-color": "red",
+            color: "blue",
+          })
+          .slideUp();
+      });
+    </script>
+  </body>
+</html>
